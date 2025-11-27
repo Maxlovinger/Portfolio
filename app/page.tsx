@@ -54,10 +54,11 @@ export default function Page() {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 text-white relative overflow-hidden">
-      {/* Ambient background effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-cyan-500/5 animate-pulse" />
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}} />
+      {/* Enhanced ambient background effects */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/8 via-purple-500/6 to-cyan-500/8" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/15 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/15 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}} />
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-cyan-500/5 to-transparent rounded-full blur-3xl" />
       {/* HERO: full-viewport row. Left is sticky; right scrolls internally. */}
       <section className="relative px-4 pt-4 pb-16 lg:pb-4">
         <div className="grid h-full grid-cols-1 gap-6 lg:grid-cols-[380px_1fr]">
@@ -81,8 +82,9 @@ export default function Page() {
                 <DotGridShader />
               </div>
               
-              {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 rounded-3xl" />
+              {/* Enhanced gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10 rounded-3xl" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-3xl" />
               <div className="relative z-10 flex flex-col h-full">
                 <div className="flex-1">
                   {/* Enhanced Wordmark */}

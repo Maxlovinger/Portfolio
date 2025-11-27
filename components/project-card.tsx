@@ -37,12 +37,12 @@ export default function ProjectCard({
     <article className={cn("group relative", containerClassName)}>
       <RevealOnView
         delay={revealDelay}
-        className="rounded-3xl border border-white/10 p-1 shadow-[0_10px_60px_-10px_rgba(0,0,0,0.6)] lg:h-full"
+        className="rounded-3xl border border-white/20 p-1 shadow-2xl shadow-blue-500/10 lg:h-full backdrop-blur-sm"
         style={{
           backgroundImage: `linear-gradient(135deg, ${gradientFrom}, ${gradientTo})`,
         }}
       >
-        <div className="relative overflow-hidden rounded-[1.35rem] bg-black lg:h-full">
+        <div className="relative overflow-hidden rounded-[1.35rem] bg-gradient-to-br from-neutral-900 to-black lg:h-full border border-white/5">
           {/* Image */}
           <div className={cn("relative w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-auto lg:h-full", imageContainerClassName)}>
             <Image
@@ -53,8 +53,10 @@ export default function ProjectCard({
               priority={priority}
               className="object-cover"
             />
-            {/* Subtle vignette */}
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/30" />
+            {/* Dark overlay for theme cohesion */}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/40" />
+            {/* Blue theme overlay */}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20" />
           </div>
 
           {/* Top-left tags */}
@@ -63,7 +65,7 @@ export default function ProjectCard({
               <Badge
                 key={t}
                 variant="secondary"
-                className="pointer-events-auto bg-black/50 text-white border-white/20 backdrop-blur-sm"
+                className="pointer-events-auto bg-gradient-to-r from-blue-600/80 to-cyan-600/80 text-white border-white/30 backdrop-blur-md font-medium shadow-lg"
               >
                 {t}
               </Badge>
@@ -72,19 +74,21 @@ export default function ProjectCard({
 
           {/* Bottom content */}
           <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <h3 className="text-lg font-semibold sm:text-xl">{title}</h3>
-                <p className="text-sm text-white/70">{subtitle}</p>
+            <div className="bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 rounded-t-2xl backdrop-blur-sm">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                  <h3 className="text-lg font-bold sm:text-xl text-white">{title}</h3>
+                  <p className="text-sm text-white/80">{subtitle}</p>
+                </div>
+                <Link
+                  href={href}
+                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600/80 to-cyan-600/80 hover:from-blue-500 hover:to-cyan-500 px-4 py-2 text-sm font-semibold backdrop-blur-sm transition-all duration-300 self-start sm:self-auto border border-white/20"
+                  aria-label={`View project: ${title}`}
+                >
+                  View project
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
-              <Link
-                href={href}
-                className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-2 text-sm font-medium backdrop-blur transition-colors hover:bg-white/20 self-start sm:self-auto"
-                aria-label={`View project: ${title}`}
-              >
-                View project
-                <ArrowRight className="h-4 w-4" />
-              </Link>
             </div>
           </div>
         </div>
