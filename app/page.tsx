@@ -68,6 +68,10 @@ export default function Page() {
               intensity="hero"
               className="relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-white/20 shadow-2xl shadow-blue-500/10 backdrop-blur-xl p-5 sm:p-6"
               style={{
+                borderRadius: '1.5rem',
+                overflow: 'hidden'
+              }}
+              style={{
                 background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.8) 50%, rgba(15, 23, 42, 0.9) 100%)'
               }}
               staggerChildren
