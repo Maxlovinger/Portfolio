@@ -67,22 +67,23 @@ export default function Page() {
             <RevealOnView
               as="div"
               intensity="hero"
-              className="relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-white/20 shadow-2xl shadow-blue-500/10 backdrop-blur-xl p-5 sm:p-6"
+              className="relative flex h-full flex-col justify-between rounded-3xl border border-white/20 shadow-2xl shadow-blue-500/10 backdrop-blur-xl p-5 sm:p-6"
               style={{
                 borderRadius: '1.5rem',
                 overflow: 'hidden',
-                background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.8) 50%, rgba(15, 23, 42, 0.9) 100%)'
+                background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.8) 50%, rgba(15, 23, 42, 0.9) 100%)',
+                contain: 'layout style paint'
               }}
               staggerChildren
             >
               {/* Enhanced texture background */}
-              <div className="pointer-events-none absolute inset-0 opacity-10 mix-blend-soft-light">
+              <div className="pointer-events-none absolute inset-0 opacity-10 mix-blend-soft-light overflow-hidden rounded-3xl">
                 <DotGridShader />
               </div>
               
               {/* Enhanced gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10 rounded-3xl" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-3xl" />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10 overflow-hidden" style={{borderRadius: '1.5rem'}} />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent overflow-hidden" style={{borderRadius: '1.5rem'}} />
               <div className="relative z-10 flex flex-col h-full">
                 <div className="flex-1">
                   {/* Enhanced Wordmark */}
