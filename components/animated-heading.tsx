@@ -67,7 +67,7 @@ export default function AnimatedHeading({
       .forEach(([lineIndex, words]) => {
         words.forEach((word, wordIndex) => {
           animate(
-            word,
+            word as any,
             {
               opacity: 1,
               filter: "blur(0px)",
