@@ -13,127 +13,102 @@ export default function Page() {
     {
       title: "Bayes AI Assistant",
       subtitle: "Personalized AI with RAG architecture",
-      imageSrc: "/images/project-1.webp",
-      tags: ["React", "Google Gemini", "Supabase"],
-      href: "https://bayes-ai.vercel.app/",
+      imageSrc: "/images/bayes.png",
+      tags: ["React", "Gemini 2.0", "RAG"],
+      href: "/projects/bayes",
       priority: true,
       gradientFrom: "#0f172a",
       gradientTo: "#6d28d9",
     },
     {
-      title: "FINRA Data Migration",
-      subtitle: "600% performance improvement on financial data",
-      imageSrc: "/images/project-2.webp",
-      tags: ["AWS", "Spark", "Apache Iceberg"],
-      href: "#finra-project",
-      priority: false,
-      gradientFrom: "#111827",
-      gradientTo: "#2563eb",
-    },
-    {
-      title: "Personal Website",
-      subtitle: "Custom HTML/CSS with 20+ UI features",
-      imageSrc: "/images/project-3.webp",
-      tags: ["HTML", "CSS", "JavaScript"],
-      href: "https://maxlovinger.github.io/",
-      priority: false,
-      gradientFrom: "#0b132b",
-      gradientTo: "#5bc0be",
-    },
-    {
-      title: "FINRA Investor Education Platform",
-      subtitle: "Interactive quiz with Amazon Bedrock LLM",
-      imageSrc: "/images/project-4.webp",
-      tags: ["Flask", "AWS Bedrock", "JavaScript"],
-      href: "#finra-hackathon",
+      title: "Code Rod - Schemer",
+      subtitle: "Tri-Co Hackathon winning course planner",
+      imageSrc: "/images/codeRod.png",
+      tags: ["Next.js", "Supabase", "TypeScript"],
+      href: "/projects/schemer",
       priority: false,
       gradientFrom: "#0f172a",
       gradientTo: "#10b981",
     },
     {
-      title: "Web3Names.AI Data Analysis",
-      subtitle: "Web crawling and decentralized domain research",
-      imageSrc: "/images/project-5.webp",
-      tags: ["Python", "SikuliX", "Web3"],
-      href: "#web3names",
-      priority: false,
-      gradientFrom: "#1f2937",
-      gradientTo: "#8b5cf6",
-    },
-    {
-      title: "Athletes Untapped Growth Tools",
-      subtitle: "Python automation for 100% company growth",
-      imageSrc: "/images/project-6.webp",
-      tags: ["Python", "Automation", "Growth"],
-      href: "#athletes-untapped",
+      title: "Aperture",
+      subtitle: "AI-powered movie rating platform",
+      imageSrc: "/images/aperture.png",
+      tags: ["JavaScript", "Gemini AI", "TMDB API"],
+      href: "/projects/aperture",
       priority: false,
       gradientFrom: "#0b132b",
-      gradientTo: "#10b981",
+      gradientTo: "#5bc0be",
+    },
+    {
+      title: "Personal Website",
+      subtitle: "Custom HTML/CSS with 20+ UI features",
+      imageSrc: "/images/maxL.png",
+      tags: ["HTML5", "CSS3", "JavaScript"],
+      href: "/projects/personal-website",
+      priority: false,
+      gradientFrom: "#111827",
+      gradientTo: "#2563eb",
     },
   ]
 
   return (
-    <main className="bg-neutral-950 text-white">
+    <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 text-white relative overflow-hidden">
+      {/* Ambient background effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-cyan-500/5 animate-pulse" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}} />
       {/* HERO: full-viewport row. Left is sticky; right scrolls internally. */}
-      <section className="px-4 pt-4 pb-16 lg:pb-4">
-        <div className="grid h-full grid-cols-1 gap-4 lg:grid-cols-[420px_1fr]">
+      <section className="relative px-4 pt-4 pb-16 lg:pb-4">
+        <div className="grid h-full grid-cols-1 gap-6 lg:grid-cols-[380px_1fr]">
           {/* LEFT: sticky and full height, no cut off */}
           <aside className="lg:sticky lg:top-4 lg:h-[calc(100svh-2rem)]">
             <RevealOnView
               as="div"
               intensity="hero"
-              className="relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-white/10 bg-neutral-900/60 p-6 sm:p-8"
+              className="relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-white/20 shadow-2xl shadow-blue-500/10 backdrop-blur-xl p-5 sm:p-6"
+              style={{
+                background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.8) 50%, rgba(15, 23, 42, 0.9) 100%)'
+              }}
               staggerChildren
             >
-              {/* Texture background */}
-              <div className="pointer-events-none absolute inset-0 opacity-5 mix-blend-soft-light">
+              {/* Enhanced texture background */}
+              <div className="pointer-events-none absolute inset-0 opacity-10 mix-blend-soft-light">
                 <DotGridShader />
               </div>
-              <div>
-                {/* Wordmark */}
-                <div className="mb-8 flex items-center gap-2">
-                  <div className="text-2xl font-extrabold tracking-tight">max lovinger</div>
-                  <div className="h-2 w-2 rounded-full bg-white/60" aria-hidden="true" />
+              
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 rounded-3xl" />
+              <div className="relative z-10">
+                {/* Enhanced Wordmark */}
+                <div className="mb-6 flex items-center gap-2">
+                  <div className="text-2xl font-black tracking-tight bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+                    Max Lovinger
+                  </div>
+                  <div className="h-2 w-2 rounded-full bg-gradient-to-r from-blue-400 to-cyan-400 shadow-lg shadow-blue-400/50 animate-pulse" aria-hidden="true" />
                 </div>
 
-                {/* Headline with intro blur effect */}
+                {/* Enhanced Headline */}
                 <AnimatedHeading
-                  className="text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl"
+                  className="text-3xl font-black leading-[0.95] tracking-tight sm:text-4xl bg-gradient-to-r from-white via-blue-50 to-white bg-clip-text text-transparent"
                   lines={["Data Science &", "Software Engineering"]}
                 />
 
-                <p className="mt-4 max-w-[42ch] text-lg text-white/70">
-                  Master's student at UPenn studying Data Science. Experience at FINRA optimizing financial data systems and building AI applications.
-                </p>
-
-                {/* CTAs */}
+                {/* Enhanced CTAs */}
                 <div className="mt-6 flex flex-wrap items-center gap-3">
-                  <Button asChild size="lg" className="rounded-full">
-                    <Link href="mailto:mlovinger@haverford.edu">
+                  <Button asChild size="default" className="rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 shadow-lg shadow-blue-500/25 border-0 text-white font-semibold px-6">
+                    <Link href="mailto:maxlovinger88@gmail.com">
                       Contact me
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
-                </div>
-
-                {/* Skills/Technologies */}
-                <div className="mt-10">
-                  <p className="mb-3 text-xs font-semibold tracking-widest text-white/50">TECHNICAL SKILLS</p>
-                  <ul className="grid grid-cols-2 gap-x-6 gap-y-3 text-2xl font-black text-white/25 sm:grid-cols-3">
-                    <li>Python</li>
-                    <li>AWS</li>
-                    <li>React</li>
-                    <li>Spark</li>
-                    <li>SQL</li>
-                    <li>Flask</li>
-                  </ul>
                 </div>
               </div>
             </RevealOnView>
           </aside>
 
           {/* RIGHT: simplified, no internal card or horizontal carousel */}
-          <div className="space-y-4">
+          <div className="space-y-6">
             {projects.map((p, idx) => (
               <ProjectCard
                 key={p.title}
