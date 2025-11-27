@@ -79,23 +79,25 @@ export default function Page() {
               
               {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 rounded-3xl" />
-              <div className="relative z-10">
-                {/* Enhanced Wordmark */}
-                <div className="mb-6 flex items-center gap-2">
-                  <div className="text-2xl font-black tracking-tight bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
-                    Max Lovinger
+              <div className="relative z-10 flex flex-col h-full">
+                <div className="flex-1">
+                  {/* Enhanced Wordmark */}
+                  <div className="mb-6 flex items-center gap-2">
+                    <div className="text-2xl font-black tracking-tight bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+                      Max Lovinger
+                    </div>
+                    <div className="h-2 w-2 rounded-full bg-gradient-to-r from-blue-400 to-cyan-400 shadow-lg shadow-blue-400/50 animate-pulse" aria-hidden="true" />
                   </div>
-                  <div className="h-2 w-2 rounded-full bg-gradient-to-r from-blue-400 to-cyan-400 shadow-lg shadow-blue-400/50 animate-pulse" aria-hidden="true" />
+
+                  {/* Enhanced Headline */}
+                  <AnimatedHeading
+                    className="text-3xl font-black leading-[0.95] tracking-tight sm:text-4xl bg-gradient-to-r from-white via-blue-50 to-white bg-clip-text text-transparent"
+                    lines={["Data Science &", "Software Engineering"]}
+                  />
                 </div>
 
-                {/* Enhanced Headline */}
-                <AnimatedHeading
-                  className="text-3xl font-black leading-[0.95] tracking-tight sm:text-4xl bg-gradient-to-r from-white via-blue-50 to-white bg-clip-text text-transparent"
-                  lines={["Data Science &", "Software Engineering"]}
-                />
-
-                {/* Enhanced CTAs */}
-                <div className="mt-6 flex flex-wrap items-center gap-3">
+                {/* Enhanced CTAs - positioned at bottom */}
+                <div className="mt-auto">
                   <Button asChild size="default" className="rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 shadow-lg shadow-blue-500/25 border-0 text-white font-semibold px-6">
                     <Link href="mailto:maxlovinger88@gmail.com">
                       Contact me

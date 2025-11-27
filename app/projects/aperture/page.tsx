@@ -46,7 +46,7 @@ export default function AperturePage() {
               🎬 A sophisticated movie rating and recommendation platform that combines detailed 10-category movie analysis with AI-powered personalized suggestions. Features a modern dark theme with purple/blue gradients and comprehensive movie management capabilities.
             </p>
             <Button asChild size="lg" className="rounded-full bg-white text-black hover:bg-white/90">
-              <Link href="#" target="_blank" rel="noopener noreferrer">
+              <Link href="https://aperture-ratings.vercel.app" target="_blank" rel="noopener noreferrer">
                 View Application
                 <ExternalLink className="ml-2 h-4 w-4" />
               </Link>
@@ -223,7 +223,7 @@ export default function AperturePage() {
                 Experience sophisticated movie rating with AI-powered recommendations and beautiful 3D animations.
               </p>
               <Button asChild size="lg" className="rounded-full bg-white text-black hover:bg-white/90">
-                <Link href="#" target="_blank" rel="noopener noreferrer">
+                <Link href="https://aperture-ratings.vercel.app" target="_blank" rel="noopener noreferrer">
                   Explore Aperture
                   <ExternalLink className="ml-2 h-4 w-4" />
                 </Link>
