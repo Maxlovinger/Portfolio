@@ -76,7 +76,6 @@ export default function AnimatedHeading({
             {
               duration: durationPerWord,
               delay: startDelay + lineIndex * lineDelay + wordIndex * staggerPerWord,
-              easing: "cubic-bezier(0.22, 1, 0.36, 1)",
             }
           )
         })

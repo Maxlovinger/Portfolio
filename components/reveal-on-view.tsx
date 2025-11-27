@@ -54,11 +54,21 @@ export default function RevealOnView({ as = "div", className, children, delay = 
         })
       }
 
-      animate(
-        targets,
-        { opacity: 1, transform: "translateY(0) scale(1)", filter: "blur(0px)" },
-        { duration: 0.95, delay: targets.length > 1 ? stagger(0.12, { start: delay }) : delay, easing: "cubic-bezier(0.22, 1, 0.36, 1)" }
-      )
+      if (targets.length > 1) {
+        targets.forEach((target, index) => {
+          animate(
+            target as any,
+            { opacity: 1, transform: "translateY(0) scale(1)", filter: "blur(0px)" },
+            { duration: 0.95, delay: delay + index * 0.12 }
+          )
+        })
+      } else {
+        animate(
+          targets[0] as any,
+          { opacity: 1, transform: "translateY(0) scale(1)", filter: "blur(0px)" },
+          { duration: 0.95, delay }
+        )
+      }
     })
 
     return () => cleanup()
